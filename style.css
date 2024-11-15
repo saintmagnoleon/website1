@@ -372,36 +372,25 @@ video {
 
 
 
-#contact-info {
-    width: 80%;
-    max-width: 600px;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
     text-align: center;
-    /* Remove margin if previously set and let flexbox handle centering */
 }
 
-#contact-info input[type="text"],
-#contact-info input[type="email"],
-#contact-info textarea {
-    width: 100%;
-    padding: 8px;
-    margin: 10px 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
+.contact-info {
+    font-size: 20px;
+    color: #333; /* Dark grey text for readability */
 }
 
-#contact-info button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+.contact-info a {
+    color: #0077cc; /* Stylish blue color for links */
+    text-decoration: none; /* No underline by default */
 }
 
-#contact-info button:hover {
-    background-color: #555;
+.contact-info a:hover {
+    text-decoration: underline; /* Underline on hover for better interaction feedback */
 }
-
 
