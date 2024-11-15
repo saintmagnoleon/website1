@@ -14,16 +14,15 @@ body {
         width: 80px; /* Adjust size for smaller screens */
     }
 }
-
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-        padding: 5px;
-    }
-    .logo img {
-        width: 60px;
-    }
+.about-section {
+    flex-direction: column;
+    text-align: center;
 }
+
+.portrait {
+    margin-bottom: 20px; /* Space between the image and the text on smaller screens */
+}
+
 
 
 /* Reset styling */
@@ -51,8 +50,8 @@ body, html {
 }
 
 .background-image {
-    background: url('homepage.jpg') no-repeat center center fixed;
-    background-size: 60%;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: 50%;
     height: 90vh;
     display: flex;
     align-items: center;
@@ -244,6 +243,9 @@ body, html {
 
 }
 
+
+
+
 .about-section {
     display: flex;
     align-items: center; /* Vertically center the content */
@@ -266,6 +268,7 @@ body, html {
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Cover ensures the image fills the assigned dimensions */
     max-height: 600px; /* Set a maximum height for the image */
+    margin-top:90px;
 }
 
 .biography {
