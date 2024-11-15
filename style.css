@@ -51,8 +51,8 @@ body, html {
 }
 
 .background-image {
-    background: url('mainbackground.jpg') no-repeat center center fixed;
-    background-size: 35%;
+    background: url('homepage.jpg') no-repeat center center fixed;
+    background-size: 60%;
     height: 90vh;
     display: flex;
     align-items: center;
@@ -98,22 +98,15 @@ body, html {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.home-button {
-    position: fixed;
-    top: 10px; /* Adjust this value to match the vertical center of the navbar links */
-    left: 20px;
-    font-size: 25px;
-    color: rgb(255, 0, 0);
-    background-color: rgba(0, 0, 0, 0); /* Fully transparent */
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    z-index: 1001;
+
+.home-button img {
+    max-height: 120px; /* Adjust size as necessary */
+    width: auto;
+    display: block; /* Ensures the image is not hidden */
 }
 
 .home-button:hover {
-    text-decoration: underline;
-    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: underline; /* Underline on hover */
 }
 
 .contact {
@@ -366,6 +359,7 @@ video {
 .current-time span {
     margin-right: 1px;
 }
+
 
 
 
