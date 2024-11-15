@@ -180,11 +180,25 @@ body, html {
     object-fit: contain; /* Keeps original aspect ratio without cropping */
 }
 
+
+
+
+
 /* Lightbox text settings */
 .lightbox-text {
     padding: 20px;
     color: #fff; /* Ensuring visibility against dark background */
 }
+
+.lightbox-text h2, .lightbox-text p {
+    color: red; /* Choose a color that fits your design */
+    text-align: center; /* Center the text */
+}
+
+
+
+
+
 
 /* Grid gallery styling */
 .media-gallery {
@@ -299,25 +313,31 @@ body, html {
 
 
 
-.close, .arrow {
+
+.close, 
+.arrow.left, 
+.arrow.right {
     position: absolute;
-    top: 50%; /* Adjust this as needed */
-    z-index: 1050; /* Higher than the lightbox content */
+    z-index: 1050;  
     cursor: pointer;
 }
 
 .close {
+    top: 20px;
     right: 20px;
-    top: 20px; /* Adjust positioning to not overlap with other content */
 }
 
 .arrow.left {
     left: 20px;
+    top: 50%;  
 }
 
 .arrow.right {
     right: 20px;
+    top: 50%;  
 }
+
+
 
 
 

@@ -1,16 +1,21 @@
 let currentIndex = 0; // Initialize index to track current item in the lightbox
+const works = document.querySelectorAll('.media-gallery img, .media-gallery video'); // Assuming this selector grabs all your items
 
-// Function to open the lightbox with the current item
 function openLightbox(index) {
     const work = works[index];
     const lightboxModal = document.getElementById('lightbox-modal');
     const lightboxImage = document.getElementById('lightbox-img');
     const lightboxVideo = document.getElementById('lightbox-video');
-    const mediaContainer = document.querySelector('.media-container'); // Get the container
+    const titleElement = document.getElementById('lightbox-title'); // Ensure this element exists
+    const descriptionElement = document.getElementById('lightbox-description'); // Ensure this element exists
 
-    // Set image or video source and apply zoom
-    if (work.isVideo) {
-        lightboxVideo.src = work.src;
+    // Update the title and description from data attributes
+    titleElement.textContent = work.getAttribute('data-title');
+    descriptionElement.textContent = work.getAttribute('data-description');
+
+    // Determine if the current work is an image or video
+    if (work.tagName.toLowerCase() === 'video') {
+        lightboxVideo.src = work.querySelector('source').src;
         lightboxVideo.style.display = 'block';
         lightboxImage.style.display = 'none';
     } else {
@@ -19,29 +24,13 @@ function openLightbox(index) {
         lightboxVideo.style.display = 'none';
     }
 
-    // Add 'active' class to apply zoom effect
-    mediaContainer.classList.add('active');
-
-    // Update title and description
-    const titleElement = document.getElementById('lightbox-title');
-    const descriptionElement = document.getElementById('lightbox-description');
-    titleElement.textContent = work.title;
-    descriptionElement.textContent = work.description;
-
-    // Show the lightbox
-    lightboxModal.style.display = 'flex';
+    lightboxModal.style.display = 'flex'; // Show the lightbox
 }
 
 function closeLightbox() {
-    const lightboxModal = document.getElementById('lightbox-modal');
-    const mediaContainer = document.querySelector('.media-container');
-    
-    // Hide the lightbox and remove zoom effect
-    lightboxModal.style.display = 'none';
-    mediaContainer.classList.remove('active');
+    document.getElementById('lightbox-modal').style.display = 'none';
 }
 
-// Function to change the current item in the lightbox
 function changeImage(direction) {
     currentIndex += direction;
     if (currentIndex >= works.length) {
@@ -49,10 +38,9 @@ function changeImage(direction) {
     } else if (currentIndex < 0) {
         currentIndex = works.length - 1;
     }
-    openLightbox(currentIndex);
+    openLightbox(currentIndex); // Assumes this function is correctly set to update the display
 }
 
-// Attach event listeners to the document for handling left and right navigation and close button
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.close').addEventListener('click', closeLightbox);
     document.querySelector('.arrow.left').addEventListener('click', function() {
@@ -61,8 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.arrow.right').addEventListener('click', function() {
         changeImage(1);
     });
-    // Attach click listeners to each work item in the gallery
-    document.querySelectorAll('.media-gallery img, .media-gallery video').forEach((item, index) => {
+
+    // Adding click event listeners to each media item
+    works.forEach((item, index) => {
         item.addEventListener('click', () => openLightbox(index));
     });
 });
