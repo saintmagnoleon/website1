@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="index.html" class="home-button">Seungyu Jung</a> 
+    <nav class="navbar">
+        <ul>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Work Section -->
+    <div id="work" class="work-section">
+        <div class="media-gallery">
+            <!-- Add your photos and videos here -->
+            <img src="web_images/milan1.jpg" alt="Photo 1" data-title="asd" data-description="word." onclick="openLightbox(this)">
+            <img src="web_images/milan2.jpg" alt="Photo 1" onclick="openLightbox(this)">
+            <img src="web_images/milan3.jpg" alt="Photo 1" onclick="openLightbox(this)">
+            <video controls poster="thumbnails/milan.jpg">
+                <source src="web_videos/SANS_TITRE.mp4" type="video/mp4">
+            </video>
+            <img src="web_images/milan.jpg" alt="Photo 1" onclick="openLightbox(this)">
+            <img src="web_images/milan4.jpg" alt="Photo 1" onclick="openLightbox(this)"> 
+            <img src="web_images/milan5.jpg" alt="Photo 1" onclick="openLightbox(this)"> 
+            <img src="web_images/milan6.jpg" alt="Photo 1" onclick="openLightbox(this)">
+            <img src="web_images/santi.jpg" alt="Photo 1" onclick="openLightbox(this)">
+            <img src="web_images/santi1.jpg" alt="Photo 1" onclick="openLightbox(this)">
+            <img src="web_images/santi3.jpg" alt="Photo 1" onclick="openLightbox(this)"> 
+            <img src="web_images/chaeyu2.jpg" alt="Photo 1" onclick="openLightbox(this)">
+            <img src="web_images/chaeyu1.JPG" alt="Photo 1" onclick="openLightbox(this)">
+            <img src="web_images/chaeyu3.jpg" alt="Photo 1" onclick="openLightbox(this)">
+            <img src="web_images/chaeyu4.jpg" alt="Photo 1" onclick="openLightbox(this)">
+            <video controls poster="thumbnails/oihan.jpg">
+                <source src="web_videos/oihan3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <img src="web_images/diego1.jpg" alt="Photo 1" onclick="openLightbox(this)"> 
+            <img src="web_images/diego2.jpg" alt="Photo 1" onclick="openLightbox(this)"> 
+            <img src="web_images/diego3.jpg" alt="Photo 1" onclick="openLightbox(this)"> 
+            <img src="web_images/diego4.jpg" alt="Photo 1" onclick="openLightbox(this)"> 
+            <img src="web_images/santi2.jpg" alt="Photo 1" onclick="openLightbox(this)"> 
+            <img src="web_images/santi4.jpg" alt="Photo 1" onclick="openLightbox(this)"> 
+            <img src="web_images/santi5.jpg" alt="Photo 1" onclick="openLightbox(this)"> 
+            <img src="web_images/santi6.jpg" alt="Photo 1" onclick="openLightbox(this)"> 
+            <img src="web_images/santi7.jpg" alt="Photo 1" onclick="openLightbox(this)"> 
+            <img src="web_images/santi8.jpg" alt="Photo 1" onclick="openLightbox(this)"> 
+            <img src="web_images/eneko.jpg" alt="Photo 1" onclick="openLightbox(this)">
+            <img src="web_images/eneko1.jpg" alt="Photo 1" onclick="openLightbox(this)">
+            <img src="web_images/eneko2.jpg" alt="Photo 1" onclick="openLightbox(this)">
+            <img src="web_images/benz1.jpg" alt="Photo 1" onclick="openLightbox(this)"> 
+            <img src="web_images/benz2.jpg" alt="Photo 1" onclick="openLightbox(this)"> 
+
+        </div>
+    </div>
+
+   <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox" aria-hidden="true" role="dialog">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <span class="arrow left" onclick="changeImage(-1)">&#10094;</span>
+        <span class="arrow right" onclick="changeImage(1)">&#10095;</span>
+        <div class="lightbox-content">
+            <div class="media-container">
+                <img id="lightbox-img" class="hidden" src="" alt="">
+                <video id="lightbox-video" class="hidden" controls>
+                    <source id="video-source" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="lightbox-text">
+                <h2 id="lightbox-title">Title</h2>
+                <p id="lightbox-description">Description goes here.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        By Seungyu Jung
+    </footer>
+    <script src="script.js"></script> 
+</body>
+\
+</html>
