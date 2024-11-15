@@ -58,31 +58,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+window.onload = function() {
+    // Initialize or retrieve the start time from sessionStorage
+    if (!sessionStorage.getItem('startTime')) {
+        sessionStorage.setItem('startTime', Date.now());
+    }
 
+    function updateTimer() {
+        const startTime = sessionStorage.getItem('startTime');
+        const seconds = Math.floor((Date.now() - startTime) / 1000);
+        document.getElementById('timer').innerText = `You've been lingering here for ${seconds} seconds. It's your time to hustle.`;
+    }
 
+    // Update the timer every second
+    setInterval(updateTimer, 1000);
+};
 
-
-
-
-function updateTime() {
-    const now = new Date();
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const seconds = now.getSeconds().toString().padStart(2, '0');
-
-    const timeString = `${hours}:${minutes}:${seconds}`;
-    document.getElementById('time-display').textContent = timeString;
-}
-
-// Initialize the time and set it to update every second
-updateTime();
-setInterval(updateTime, 1000);
-
-
-document.querySelector('#contact-info form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting traditionally
-    // Implement AJAX request here if needed or handle form data as required
-    alert('Thank you for your message!');
-});
-
-console.log(document.querySelector('.media-gallery')); // Should log the gallery element 
+// Reset timer when the page is refreshed or closed
+window.onbeforeunload = function() {
+    sessionStorage.removeItem('startTime');
+};

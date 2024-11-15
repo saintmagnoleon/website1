@@ -66,7 +66,7 @@ body, html {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0); /* Fully transparent */
+    background-color: transparent; /* Fully transparent */
     z-index: 1000;
     padding: 10px 0; /* Adjust padding to ensure vertical height matches desired positioning */
 }
@@ -94,7 +94,7 @@ body, html {
 
 .navbar ul li a:hover, .navbar ul li a:focus {
     text-decoration: underline;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: transparent;
 }
 
 
@@ -319,8 +319,16 @@ body, html {
 }
 
 .close {
-    top: 20px;
+    position: fixed;
+    top: 50px; /* Adjust this value to lower the button, originally might be closer to top */
     right: 20px;
+    z-index: 1100; /* Ensure it's above most other elements */
+    cursor: pointer;
+    font-size: 24px;
+    color: #ff0000; /* Ensure the button is visible on any background */
+    background: transparent; /* Semi-transparent background for better visibility */
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 .arrow.left {
@@ -345,25 +353,6 @@ video {
     height: auto; /* Maintain aspect ratio */
     display: block; /* To prevent any unwanted inline properties */
 }
-
-.current-time {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    font-size: 12px;
-    color: #ff0000;
-    font-weight: thin;
-    background-color: rgb(255, 255, 255); /* Optional: semi-transparent background */
-    padding: 5px 10px;
-    border-radius: 5px;
-    z-index: 1000;
-}
-
-.current-time span {
-    margin-right: 1px;
-}
-
-
 
 
 
