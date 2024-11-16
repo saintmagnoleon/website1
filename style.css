@@ -60,8 +60,17 @@ body {
     #click-counter, #timer {
         display: none; /* Hides the elements on small screens */
     }
+    .arrow {
+        font-size: 18px; /* Smaller size for small screens */
+        padding: 5px; /* Less padding */
+    }
+    .arrow.left {
+        left: 5px; /* Less margin from the edge */
+    }
+    .arrow.right {
+        right: 5px; /* Less margin from the edge */
+    }
 }
-
 
 
 
@@ -433,4 +442,10 @@ video {
     font-size: 12px; /* Smaller font size */
     border-radius: 5px; /* Rounded corners */
     z-index: 1000; /* Ensures it is on top */
+}
+
+#click-counter, #timer {
+    margin: 0 10px; /* Adds horizontal space around each item */
+    text-align: center; /* Centers text if stacked */
+
 }
