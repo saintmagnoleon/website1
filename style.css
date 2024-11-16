@@ -84,13 +84,7 @@ body {
     }
     .arrow {
         font-size: 18px; /* Smaller size for small screens */
-        padding: 5px; /* Less padding */
-    }
-    .arrow.left {
-        left: 1px; /* Less margin from the edge */
-    }
-    .arrow.right {
-        right: 1px; /* Less margin from the edge */
+   
     }
 
     .media-gallery {
@@ -397,8 +391,6 @@ h1 {
     font-size: 20px; /* Adjust the size as needed */
     line-height: 50px; /* Align the icon vertically */
     text-align: center; /* Center the icon horizontally */
-    padding: 0; /* Adds space around the arrow */
-    margin: 0; /* Optional: adds more space around the element */
     position: absolute;
     top: 50%; /* Centers vertically */
     transform: translateY(-50%); /* Aligns arrow with the center of the container */
@@ -408,13 +400,6 @@ h1 {
     background-color: transparent; /* Subtle touch feedback */
 }
 
-.close, 
-.arrow.left, 
-.arrow.right {
-    position: absolute;
-    z-index: 1050;  
-    cursor: pointer;
-}
 
 .close {
     position: fixed;
