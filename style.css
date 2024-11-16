@@ -13,15 +13,16 @@ body {
     .logo img {
         width: 80px; /* Adjust size for smaller screens */
     }
-}
-.about-section {
-    flex-direction: column;
-    text-align: center;
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .portrait {
+        margin-bottom: 20px; /* Space between the image and the text on smaller screens */
+    }
 }
 
-.portrait {
-    margin-bottom: 20px; /* Space between the image and the text on smaller screens */
-}
 
 
 
@@ -63,12 +64,13 @@ body, html {
 .navbar {
     position: fixed;
     top: 0;
+    left: 0; 
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: transparent; /* Fully transparent */
     z-index: 1000;
-    padding: 10px 0; /* Adjust padding to ensure vertical height matches desired positioning */
+    padding: 20px 10px ; /* Adjust padding to ensure vertical height matches desired positioning */
 }
 
 .navbar ul {
@@ -142,6 +144,8 @@ body, html {
     margin-top: 40px; /* Adds external space above */
 }
 
+
+
 /* Lightbox container and media display settings */
 .lightbox {
     position: fixed;
@@ -157,38 +161,39 @@ body, html {
 }
 
 .media-container {
+    width: 100%; /* Use the full width of the lightbox content */
+    max-height: 80vh; /* Maximum height to avoid overflowing the viewport */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 80%; /* Max width of media to avoid overflow */
-    max-height: 80vh; /* Max height of media */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
 .media-container img, 
 .media-container video {
-    max-width: 100%; /* Full width of the media container */
-    max-height: 80vh; /* Limits the height to 80% of viewport height */
-    object-fit: contain; /* Keeps original aspect ratio without cropping */
+    max-width: 90%; /* Limits width to prevent overflow and maintain padding */
+    max-height: 75vh; /* Adjust height accordingly */
+    object-fit: contain; /* Maintains aspect ratio without cropping */
 }
-
-
-
-
 
 /* Lightbox text settings */
 .lightbox-text {
-    padding: 20px;
-    color: #fff; /* Ensuring visibility against dark background */
+    text-align: center; /* Centers the text underneath the media */
+    padding-top: 20px; /* Space between media and text */
+    width: 90%; /* Ensures text container does not exceed media width */
+    margin: 0 auto; /* Centers text container */
 }
 
 .lightbox-text h2, .lightbox-text p {
     color: red; /* Choose a color that fits your design */
-    text-align: center; /* Center the text */
+    text-align: right; /* Center the text */
 }
 
-
-
+h1 {
+    display: inline; /* Makes the h1 element inline so it only occupies as much width as its content */
+    width: auto; /* Resets any previously set widths */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    margin: 0; /* Removes any default margin to help in lining up */
+}
 
 
 
@@ -288,27 +293,17 @@ body, html {
     margin: 0; /* Reset default margins if necessary */
 }
 
-@media (max-width: 768px) {
-    .about-section {
-        flex-direction: column; /* Stack vertically on smaller screens */
-        padding: 20px; /* Reduce padding on smaller screens */
-    }
 
-    .portrait {
-        width: 80%; /* Allow the image to take more width on small screens */
-        margin-bottom: 20px; /* Space between the image and text */
-    }
 
-    .biography {
-        width: 100%; /* Full width for text on small screens */
-        padding: 0; /* Remove padding around the text on small screens */
-    }
+.arrow {
+    color: red; /* Changes the arrow color to red */
+    cursor: pointer; /* Ensures the cursor indicates a clickable element */
+    font-size: 30px; /* Adjust the size as needed */
+    position: absolute;
+    top: 50%; /* Centers vertically */
+    transform: translateY(-50%); /* Aligns arrow with the center of the container */
+    z-index: 1001; /* Ensures arrows are above other content */
 }
-
-
-
-
-
 
 .close, 
 .arrow.left, 
@@ -340,10 +335,6 @@ body, html {
     right: 20px;
     top: 50%;  
 }
-
-
-
-
 
 
 
@@ -380,3 +371,12 @@ video {
     text-decoration: underline; /* Underline on hover for better interaction feedback */
 }
 
+
+#click-counter {
+    background-color: transparent; /* Light gray background */
+    color: #333; /* Dark text for visibility */
+    padding: 5px 10px;
+    font-size: 12px; /* Smaller font size */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1000; /* Ensures it is on top */
+}

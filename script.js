@@ -78,3 +78,18 @@ window.onload = function() {
 window.onbeforeunload = function() {
     sessionStorage.removeItem('startTime');
 };
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var counter = document.getElementById('click-counter');
+
+    // Initialize the click count from sessionStorage or start at 0
+    var clicks = parseInt(sessionStorage.getItem('clickCount')) || 0;
+    counter.innerText = `You clicked ${clicks} times.`;
+
+    document.addEventListener('click', function() {
+        clicks++; // Increment the click count
+        sessionStorage.setItem('clickCount', clicks); // Store the updated count in sessionStorage
+        counter.innerText = `You clicked ${clicks} times.`;
+    });
+});
