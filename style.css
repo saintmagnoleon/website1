@@ -26,6 +26,11 @@ body {
         font-size: 12px; /* smaller font size for readability on small screens */
         top: 5px; /* adjust positioning to avoid overlap */
     }
+
+    .navbar {
+        padding: 10px; /* Less padding */
+        font-size: 14px; /* Smaller font size */
+    }
 }
 
 
@@ -204,6 +209,10 @@ h1 {
 
 
 
+
+
+
+
 /* Grid gallery styling */
 .media-gallery {
     display: grid;
@@ -239,11 +248,6 @@ h1 {
     display: block; /* For elements that need to be shown */
 }
 
-
-
-
-
-
 .name {position: absolute;
     bottom: 20px;
     right: 20px;
@@ -258,6 +262,8 @@ h1 {
 
 
 
+
+
 .about-section {
     display: flex;
     align-items: center; /* Vertically center the content */
@@ -266,7 +272,6 @@ h1 {
     max-width: 1200px; /* Control the max width for optimal viewing */
     margin: auto; /* Center the whole section horizontally */
 }
-
 
 .portrait {
     flex: 0 0 40%; /* Allocate fixed portion to the image, adjust as needed */
@@ -305,7 +310,7 @@ h1 {
 .arrow {
     color: red; /* Changes the arrow color to red */
     cursor: pointer; /* Ensures the cursor indicates a clickable element */
-    font-size: 30px; /* Adjust the size as needed */
+    font-size: 20px; /* Adjust the size as needed */
     position: absolute;
     top: 50%; /* Centers vertically */
     transform: translateY(-50%); /* Aligns arrow with the center of the container */
