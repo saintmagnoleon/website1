@@ -400,6 +400,13 @@ h1 {
     background-color: transparent; /* Subtle touch feedback */
 }
 
+.close, 
+.arrow.left, 
+.arrow.right {
+    position: absolute;
+    z-index: 1050;  
+    cursor: pointer;
+}
 
 .close {
     position: fixed;
