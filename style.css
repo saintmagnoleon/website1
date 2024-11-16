@@ -166,7 +166,7 @@ body, html {
 
 .navbar ul li {
     display: inline-block;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 .navbar ul li a {
@@ -227,8 +227,8 @@ body, html {
     padding: 40px;
     text-align: center;
     color: white;
-    padding-top: 60px; /* Adds internal space at the top */
-    margin-top: 40px; /* Adds external space above */
+    padding-top: 10px; /* Adds internal space at the top */
+    margin-top: 10px; /* Adds external space above */
 }
 
 
@@ -339,9 +339,16 @@ h1 {
 
 
 
+/* Adjust spacing for the About Me section */
+#about {
+    margin-top: -60px; /* Remove or reduce the top margin */
+   
+}
 
 
 .about-section {
+    
+    
     display: flex;
     align-items: center; /* Vertically center the content */
     justify-content: center; /* Horizontally center the content within the max width */
@@ -399,7 +406,7 @@ h1 {
     z-index: 1001; /* Ensures arrows are above other content */
 }
 .arrow:active {
-    background-color: rgba(0, 0, 0, 0.1); /* Subtle touch feedback */
+    background-color: transparent; /* Subtle touch feedback */
 }
 
 .close, 
@@ -448,15 +455,27 @@ video {
 
 .contact-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full height of the viewport */
-    text-align: center;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    overflow: hidden; /* Disable scrolling inside this section */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove padding */
+    box-sizing: border-box; /* Include padding and borders in dimensions */
 }
 
+
 .contact-info {
+    margin-top: -65px; /* Remove or reduce the top margin */
     font-size: 20px;
     color: #333; /* Dark grey text for readability */
+    height: 100vh; /* Occupy full viewport height */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    box-sizing: border-box; /* Ensure padding doesn't affect total size */
+    background-color: white; /* Optional: set a background color */
 }
 
 .contact-info a {
