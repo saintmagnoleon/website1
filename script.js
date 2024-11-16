@@ -126,3 +126,5 @@ if (window.innerWidth <= 768) { // Target screens smaller than or equal to 480px
         lastScrollTop = scrollTop; // Update the last scroll position
     });
 } 
+
+
