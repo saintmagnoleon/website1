@@ -46,6 +46,15 @@ body {
         background-size: cover; /* Ensures the background covers the full area */
         background-position: center; /* Centers the background */
     }
+    .about-section p, .about-section h1 {
+        font-size: 16px; /* Smaller font size for better readability */
+        line-height: 1.5; /* Improved line spacing */
+        width: 100%; /* Ensures the section uses full width */
+        max-width: none; /* Removes any maximum width constraints */
+    }
+    .about-section p {
+        word-wrap: break-word; /* Ensures words do not overflow their container */
+    }
 }
 
 
