@@ -1,7 +1,8 @@
 /* Default for larger screens */
 body {
-    font-size: 18px;
-    padding: 20px;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's width and height */
 }
 
 /* Smaller devices */
@@ -30,6 +31,8 @@ body {
     .navbar {
         padding: 10px; /* Less padding */
         font-size: 14px; /* Smaller font size */
+        top: 0; 
+        background-color: white;
         position: relative; /* Changes position to relative if it's set to absolute or fixed */
         margin-top: 20px; /* Adds space above the navbar to avoid overlap */
         transition: top 0.3s;
@@ -70,6 +73,14 @@ body {
     .arrow.right {
         right: 5px; /* Less margin from the edge */
     }
+
+    .media-gallery {
+        padding-top: 80px; /* Add more padding for mobile */
+    }
+    html, body {
+        height: 100%;
+        overflow-x: hidden; /* Prevent horizontal scrolling issues */
+    }
 }
 
 
@@ -83,6 +94,7 @@ body {
     box-sizing: border-box;
 }
 
+
 /* Full-screen background */
 body, html {
     height: auto;
@@ -90,6 +102,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 40px
 }
 
 .centered-container {
@@ -113,13 +126,13 @@ body, html {
 
 .navbar {
     position: fixed;
+    margin-top: 0; /*no space above navbar*/
     top: 0;
-    left: 0; 
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: transparent; /* Fully transparent */
-    z-index: 1000;
+    background-color: white; /* Fully transparent */
+    z-index: 100;
     padding: 20px 10px ; /* Adjust padding to ensure vertical height matches desired positioning */
 }
 
@@ -261,6 +274,8 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 10px;
+    margin: 0;
+    
 }
 
 .media-gallery img, 
