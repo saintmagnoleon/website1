@@ -31,6 +31,14 @@ body {
         padding: 10px; /* Less padding */
         font-size: 14px; /* Smaller font size */
     }
+    .navbar ul {
+        flex-direction: column; /* Stack links vertically */
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin: 5px 0; /* Reduce margin between links */
+    }
 }
 
 
