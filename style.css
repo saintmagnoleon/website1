@@ -30,6 +30,8 @@ body {
     .navbar {
         padding: 10px; /* Less padding */
         font-size: 14px; /* Smaller font size */
+        position: relative; /* Changes position to relative if it's set to absolute or fixed */
+        margin-top: 20px; /* Adds space above the navbar to avoid overlap */
     }
     .navbar ul {
         flex-direction: column; /* Stack links vertically */
@@ -38,6 +40,11 @@ body {
 
     .navbar ul li {
         margin: 5px 0; /* Reduce margin between links */
+    }
+
+    .background-image {
+        background-size: cover; /* Ensures the background covers the full area */
+        background-position: center; /* Centers the background */
     }
 }
 
