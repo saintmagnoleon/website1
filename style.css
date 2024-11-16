@@ -134,7 +134,7 @@ body, html {
 
 .background-image {
     background: url('background.jpg') no-repeat center center fixed;
-    background-size: 50%;
+    background-size: 55%;
     height: 90vh;
     display: flex;
     align-items: center;
@@ -466,7 +466,7 @@ video {
 
 
 .contact-info {
-    margin-top: -65px; /* Remove or reduce the top margin */
+    margin-top: -70px; /* Remove or reduce the top margin */
     font-size: 20px;
     color: #333; /* Dark grey text for readability */
     height: 100vh; /* Occupy full viewport height */
