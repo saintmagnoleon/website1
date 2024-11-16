@@ -84,10 +84,10 @@ body {
         padding: 5px; /* Less padding */
     }
     .arrow.left {
-        left: 5px; /* Less margin from the edge */
+        left: 1px; /* Less margin from the edge */
     }
     .arrow.right {
-        right: 5px; /* Less margin from the edge */
+        right: 1px; /* Less margin from the edge */
     }
 }
 
