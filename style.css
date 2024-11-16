@@ -67,10 +67,6 @@ body {
         font-size: 20px !important; /* Even smaller font size for phone screens */
     }
     
-
-
-
-
     .background-image {
         background-size: cover; /* Ensures the background covers the full area */
         background-position: center; /* Centers the background */
@@ -217,7 +213,7 @@ body, html {
     bottom: 20px; /* Bottom margin to keep it off the very edge */
     text-align: right; /* Aligns the text to the right */
     color: #666; /* Sets the text color, adjust as needed */
-    font-size: 10px; /* Sets the text size, adjust according to your design */
+    font-size: 8px; /* Sets the text size, adjust according to your design */
     z-index: 100; /* Ensures it stays on top of other content if overlapping occurs */
 }
 
@@ -310,6 +306,15 @@ h1 {
 .media-gallery video:hover {
     transform: scale(1.05);
 }
+video {
+    width: 100%; /* Adjust the width as necessary */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* To prevent any unwanted inline properties */
+}
+
+
+
+
 
 /* Modal visibility toggles */
 .modal.active, .lightbox.active {
@@ -335,19 +340,13 @@ h1 {
 
 }
 
-
-
-
 /* Adjust spacing for the About Me section */
 #about {
-    margin-top: -60px; /* Remove or reduce the top margin */
+    margin-top: -40px; /* Remove or reduce the top margin */
    
 }
 
-
 .about-section {
-    
-    
     display: flex;
     align-items: center; /* Vertically center the content */
     justify-content: center; /* Horizontally center the content within the max width */
@@ -437,18 +436,6 @@ h1 {
 }
 
 
-
-
-video {
-    width: 100%; /* Adjust the width as necessary */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* To prevent any unwanted inline properties */
-}
-
-
-
-
-
 .contact-section {
     display: flex;
     flex-direction: column;
@@ -493,7 +480,8 @@ video {
     z-index: 1000; /* Ensures it is on top */
 }
 
-#click-counter, #timer {
+#click-counter, 
+#timer {
     margin: 0 10px; /* Adds horizontal space around each item */
     text-align: center; /* Centers text if stacked */
 
