@@ -1,19 +1,20 @@
-let currentIndex = 0; // Initialize index to track current item in the lightbox
-const works = document.querySelectorAll('.media-gallery img, .media-gallery video'); // Assuming this selector grabs all your items
+let currentIndex = 0;
+const works = document.querySelectorAll('.media-gallery img, .media-gallery video');
+let debounceTimer;
 
 function openLightbox(index) {
+    if (!works[index]) return; // Safety check
+
     const work = works[index];
     const lightboxModal = document.getElementById('lightbox-modal');
     const lightboxImage = document.getElementById('lightbox-img');
     const lightboxVideo = document.getElementById('lightbox-video');
-    const titleElement = document.getElementById('lightbox-title'); // Ensure this element exists
-    const descriptionElement = document.getElementById('lightbox-description'); // Ensure this element exists
+    const titleElement = document.getElementById('lightbox-title');
+    const descriptionElement = document.getElementById('lightbox-description');
 
-    // Update the title and description from data attributes
     titleElement.textContent = work.getAttribute('data-title');
     descriptionElement.textContent = work.getAttribute('data-description');
 
-    // Determine if the current work is an image or video
     if (work.tagName.toLowerCase() === 'video') {
         lightboxVideo.src = work.querySelector('source').src;
         lightboxVideo.style.display = 'block';
@@ -24,7 +25,7 @@ function openLightbox(index) {
         lightboxVideo.style.display = 'none';
     }
 
-    lightboxModal.style.display = 'flex'; // Show the lightbox
+    lightboxModal.style.display = 'flex';
 }
 
 function closeLightbox() {
@@ -32,29 +33,43 @@ function closeLightbox() {
 }
 
 function changeImage(direction) {
-    currentIndex += direction;
-    if (currentIndex >= works.length) {
-        currentIndex = 0;
-    } else if (currentIndex < 0) {
-        currentIndex = works.length - 1;
-    }
-    openLightbox(currentIndex); // Assumes this function is correctly set to update the display
+    if (debounceTimer) clearTimeout(debounceTimer);
+
+    debounceTimer = setTimeout(() => {
+        currentIndex += direction;
+
+        if (currentIndex >= works.length) {
+            currentIndex = 0;
+        } else if (currentIndex < 0) {
+            currentIndex = works.length - 1;
+        }
+
+        openLightbox(currentIndex);
+    }, 200); // Debouncing the navigation to prevent rapid event firing
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.close').addEventListener('click', closeLightbox);
-    document.querySelector('.arrow.left').addEventListener('click', function() {
-        changeImage(-1);
-    });
-    document.querySelector('.arrow.right').addEventListener('click', function() {
-        changeImage(1);
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.arrow.left').addEventListener('click', () => changeImage(-1));
+    document.querySelector('.arrow.right').addEventListener('click', () => changeImage(1));
 
-    // Adding click event listeners to each media item
     works.forEach((item, index) => {
-        item.addEventListener('click', () => openLightbox(index));
+        item.addEventListener('click', () => {
+            currentIndex = index;
+            openLightbox(index);
+        });
     });
 });
+
+
+
+    
+
+
+
+
+
+
+
 
 
 
