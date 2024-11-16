@@ -5,7 +5,7 @@ body {
 }
 
 /* Smaller devices */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     body {
         font-size: 16px;
         padding: 10px;
@@ -21,7 +21,7 @@ body {
     .portrait {
         margin-bottom: 20px; /* Space between the image and the text on smaller screens */
     }
-    
+
     .timer, .click-counter {
         font-size: 12px; /* smaller font size for readability on small screens */
         top: 5px; /* adjust positioning to avoid overlap */
