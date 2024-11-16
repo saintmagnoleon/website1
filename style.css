@@ -32,7 +32,10 @@ body {
     .about-section {
         flex-direction: column;
         text-align: center;
+        padding: 10px; /* Less padding on smaller screens */
+        height: auto; /* Or adjust the height as needed for smaller devices */
     }
+
     
     .portrait {
         margin-bottom: 20px; /* Space between the image and the text on smaller screens */
