@@ -108,3 +108,22 @@ document.addEventListener('DOMContentLoaded', function() {
         counter.innerText = `You clicked ${clicks} times.`;
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var lastScrollTop = 0; // Variable to store the last scroll position
+    var navbar = document.querySelector('.navbar'); // Select your navbar
+
+    window.addEventListener("scroll", function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Scrolling down
+            navbar.style.top = "-60px"; // Make sure this value matches or exceeds your navbar's height
+        } else {
+            // Scrolling up
+            navbar.style.top = "0";
+        }
+        lastScrollTop = scrollTop;
+    });
+});

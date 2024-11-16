@@ -5,7 +5,7 @@ body {
 }
 
 /* Smaller devices */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     body {
         font-size: 16px;
         padding: 10px;
@@ -32,6 +32,8 @@ body {
         font-size: 14px; /* Smaller font size */
         position: relative; /* Changes position to relative if it's set to absolute or fixed */
         margin-top: 20px; /* Adds space above the navbar to avoid overlap */
+        transition: top 0.3s;
+        z-index: 100; /* Make sure the navbar stays on top of other content */
     }
     .navbar ul {
         flex-direction: column; /* Stack links vertically */
@@ -54,6 +56,9 @@ body {
     }
     .about-section p {
         word-wrap: break-word; /* Ensures words do not overflow their container */
+    }
+    #click-counter, #timer {
+        display: none; /* Hides the elements on small screens */
     }
 }
 
