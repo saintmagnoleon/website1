@@ -49,9 +49,7 @@ body {
 
     .navbar {
         padding: 10px; /* Less padding */
-        font-size: 14px; /* Smaller font size */
         top: 0; 
-        background-color: white;
         position: relative; /* Changes position to relative if it's set to absolute or fixed */
         margin-top: 20px; /* Adds space above the navbar to avoid overlap */
         transition: top 0.3s;
@@ -65,6 +63,13 @@ body {
     .navbar ul li {
         margin: 5px 0; /* Reduce margin between links */
     }
+    .navbar ul li a {
+        font-size: 20px !important; /* Even smaller font size for phone screens */
+    }
+    
+
+
+
 
     .background-image {
         background-size: cover; /* Ensures the background covers the full area */
