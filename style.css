@@ -390,7 +390,7 @@ video {
 
 
 .arrow {
-    color: red; /* Changes the arrow color to red */
+    color: rgb(255, 0, 0); /* Changes the arrow color to red */
     cursor: pointer; /* Ensures the cursor indicates a clickable element */
     font-size: 20px; /* Adjust the size as needed */
     line-height: 50px; /* Align the icon vertically */
