@@ -110,7 +110,6 @@ body {
     box-sizing: border-box;
 }
 
-
 /* Full-screen background */
 body, html {
     height: auto;
@@ -184,6 +183,9 @@ body, html {
 }
 
 
+
+
+
 .home-button img {
     max-height: 120px; /* Adjust size as necessary */
     width: auto;
@@ -227,6 +229,8 @@ body, html {
     padding-top: 10px; /* Adds internal space at the top */
     margin-top: 10px; /* Adds external space above */
 }
+
+
 
 
 
@@ -309,12 +313,12 @@ h1 {
     border: 2px solid red ; 
     transform: scale(1.05);
 }
+
 video {
     width: 100%; /* Adjust the width as necessary */
     height: auto; /* Maintain aspect ratio */
     display: block; /* To prevent any unwanted inline properties */
 }
-
 
 
 
@@ -342,6 +346,9 @@ video {
     border-radius: 5px;
 
 }
+
+
+
 
 /* Adjust spacing for the About Me section */
 #about {
@@ -392,11 +399,15 @@ video {
 
 
 
+
+
+
+
 .arrow {
     color: rgb(255, 0, 0); /* Changes the arrow color to red */
     cursor: pointer; /* Ensures the cursor indicates a clickable element */
     font-size: 20px; /* Adjust the size as needed */
-    line-height: 50px; /* Align the icon vertically */
+    line-height: center; /* Align the icon vertically */
     text-align: center; /* Center the icon horizontally */
     position: absolute;
     top: 50%; /* Centers vertically */
@@ -439,6 +450,10 @@ video {
 }
 
 
+
+
+
+
 .contact-section {
     display: flex;
     flex-direction: column;
@@ -449,7 +464,6 @@ video {
     padding: 0; /* Remove padding */
     box-sizing: border-box; /* Include padding and borders in dimensions */
 }
-
 
 .contact-info {
     margin-top: -70px; /* Remove or reduce the top margin */
@@ -472,6 +486,11 @@ video {
 .contact-info a:hover {
     text-decoration: underline; /* Underline on hover for better interaction feedback */
 }
+
+
+
+
+
 
 
 #click-counter {
