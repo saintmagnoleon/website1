@@ -90,6 +90,8 @@ body {
 
     .media-gallery {
         padding-top: 80px; /* Add more padding for mobile */
+          -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS devices */
+
     }
     html, body {
         height: 100%;

@@ -110,21 +110,18 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-if (window.innerWidth <= 768) { // Target screens smaller than or equal to 480px (like phones)
-    let lastScrollTop = 0; // Store the last scroll position
-    const navbar = document.querySelector('.navbar'); // Select the navbar element
+if (window.innerWidth <= 768) {
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
 
     window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > lastScrollTop) {
-            // Scrolling down
-            navbar.style.top = "-300px"; // Adjust based on your navbar height (e.g., -100px hides it)
+            navbar.style.top = "-300px"; // Hide navbar
         } else {
-            // Scrolling up
-            navbar.style.top = "0"; // Show the navbar
+            navbar.style.top = "0"; // Show navbar
         }
-        lastScrollTop = scrollTop; // Update the last scroll position
+        lastScrollTop = scrollTop;
     });
-} 
-
+}
 
