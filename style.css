@@ -304,6 +304,7 @@ h1 {
 
 .media-gallery img:hover, 
 .media-gallery video:hover {
+    border: 2px solid red ; 
     transform: scale(1.05);
 }
 video {
