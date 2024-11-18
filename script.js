@@ -61,18 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-    
-
-
-
-
-
-
-
-
-
-
 window.onload = function() {
     // Initialize or retrieve the start time from sessionStorage
     if (!sessionStorage.getItem('startTime')) {
