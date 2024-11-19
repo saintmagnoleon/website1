@@ -287,6 +287,10 @@ h1 {
     
 }
 
+img {
+    image-rendering: -webkit-optimize-contrast!important; /* For WebKit browsers like Chrome and Safari */
+    image-rendering: optimizeQuality!important; /* For Firefox */
+}
 .media-gallery img, 
 .media-gallery video {
     width: 100%;
