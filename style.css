@@ -186,7 +186,6 @@ body, html {
     z-index: 100; /* Ensures it stays on top of other content if overlapping occurs */
 }
 
-
 .work-section {
     padding: 40px;
     text-align: center;
@@ -195,11 +194,6 @@ body, html {
     margin-top: 10px; /* Adds external space above */
 }
 
-
-
-
-
-/* Lightbox container and media display settings */
 .lightbox {
     position: fixed;
     top: 0;
@@ -227,35 +221,28 @@ body, html {
     max-height: 75vh; /* Adjust height accordingly */
     object-fit: contain; /* Maintains aspect ratio without cropping */
 }
-
-/* Lightbox text settings */
 .lightbox-text {
     text-align: center; /* Centers the text underneath the media */
     padding-top: 20px; /* Space between media and text */
     width: 90%; /* Ensures text container does not exceed media width */
     margin: 0 auto; /* Centers text container */
 }
-
 .lightbox-text h2, .lightbox-text p {
     color: red; /* Choose a color that fits your design */
     text-align: right; /* Center the text */
 }
-
 h1 {
     display: inline; /* Makes the h1 element inline so it only occupies as much width as its content */
     width: auto; /* Resets any previously set widths */
     white-space: nowrap; /* Prevents the text from wrapping */
     margin: 0; /* Removes any default margin to help in lining up */
 }
-
-/* Grid gallery styling */
 .media-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 10px;
     margin: 0;
 }
-
 .media-gallery img, 
 .media-gallery video {
     width: 100%;
@@ -266,27 +253,20 @@ h1 {
     transition: transform 0.3s ease-in-out; /* Smooth transformation on hover */
     border-radius: 5px;
 }
-
 .media-gallery img:hover, 
 .media-gallery video:hover {
     border: 2px solid red ; 
     transform: scale(1.05);
 }
-
-
-/* Modal visibility toggles */
 .modal.active, .lightbox.active {
     display: flex; /* Display only when active */
 }
-
 .hidden {
     display: none; /* Ensures that hidden elements do not take space or interact */
 }
-
 .visible {
     display: block; /* For elements that need to be shown */
 }
-
 .name {position: absolute;
     bottom: 20px;
     right: 20px;
@@ -295,18 +275,11 @@ h1 {
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
-
 }
-
-
-
-
-/* Adjust spacing for the About Me section */
 #about {
     margin-top: -15px; /* Remove or reduce the top margin */
    
 }
-
 .about-section {
     display: flex;
     align-items: center; /* Vertically center the content */
@@ -315,14 +288,12 @@ h1 {
     max-width: 1200px; /* Control the max width for optimal viewing */
     margin: auto; /* Center the whole section horizontally */
 }
-
 .portrait {
     flex: 0 0 40%; /* Allocate fixed portion to the image, adjust as needed */
     display: flex;
     justify-content: center; /* Center the image within its division */
     align-items: center; /* Center the image vertically */
 }
-
 .portrait img {
     width: 100%; /* Full width of its container */
     height: auto; /* Maintain aspect ratio */
@@ -330,7 +301,6 @@ h1 {
     max-height: 600px; /* Set a maximum height for the image */
     margin-top:90px;
 }
-
 .biography {
     flex: 1; /* Allow the biography to take up remaining space */
     padding-left: 40px; /* Increase padding for clearer separation */
@@ -338,22 +308,13 @@ h1 {
     flex-direction: column;
     justify-content: center; /* Center the text content vertically */
 }
-
 .biography h1 {
     margin-bottom: 20px; /* Space below the heading */
 }
-
 .biography p {
     text-align: justify; /* Improve readability of the paragraph */
     margin: 0; /* Reset default margins if necessary */
 }
-
-
-
-
-
-
-
 .arrow {
     color: rgb(255, 0, 0); /* Changes the arrow color to red */
     cursor: pointer; /* Ensures the cursor indicates a clickable element */
@@ -376,7 +337,6 @@ h1 {
     z-index: 1050;  
     cursor: pointer;
 }
-
 .close {
     position: fixed;
     top: 50px; /* Adjust this value to lower the button, originally might be closer to top */
@@ -399,8 +359,6 @@ h1 {
     right: 20px;
     top: 50%;  
 }
-
-
 .contact-section {
     display: flex;
     flex-direction: column;
@@ -411,7 +369,6 @@ h1 {
     padding: 0; /* Remove padding */
     box-sizing: border-box; /* Include padding and borders in dimensions */
 }
-
 .contact-info {
     margin-top: -70px; /* Remove or reduce the top margin */
     font-size: 20px;
@@ -424,29 +381,10 @@ h1 {
     box-sizing: border-box; /* Ensure padding doesn't affect total size */
     background-color: white; /* Optional: set a background color */
 }
-
 .contact-info a {
     color: #0077cc; /* Stylish blue color for links */
     text-decoration: none; /* No underline by default */
 }
-
 .contact-info a:hover {
     text-decoration: underline; /* Underline on hover for better interaction feedback */
-}
-
-
-#click-counter {
-    background-color: transparent; /* Light gray background */
-    color: #333; /* Dark text for visibility */
-    padding: 5px 10px;
-    font-size: 12px; /* Smaller font size */
-    border-radius: 5px; /* Rounded corners */
-    z-index: 1000; /* Ensures it is on top */
-}
-
-#click-counter, 
-#timer {
-    margin: 0 10px; /* Adds horizontal space around each item */
-    text-align: center; /* Centers text if stacked */
-
 }
