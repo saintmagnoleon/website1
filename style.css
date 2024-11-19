@@ -252,6 +252,8 @@ h1 {
     display: block; /* To prevent any unwanted inline properties */
     transition: transform 0.3s ease-in-out; /* Smooth transformation on hover */
     border-radius: 5px;
+    image-rendering: -webkit-optimize-contrast!important; /* For WebKit browsers like Chrome and Safari */
+    image-rendering: optimizeQuality!important; /* For Firefox */
 }
 .media-gallery img:hover, 
 .media-gallery video:hover {
