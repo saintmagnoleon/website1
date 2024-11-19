@@ -32,7 +32,6 @@ function closeLightbox() {
     document.getElementById('lightbox-modal').style.display = 'none';
 }
 
-
 function changeImage(direction) {
     if (debounceTimer) clearTimeout(debounceTimer);
 

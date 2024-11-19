@@ -185,6 +185,17 @@ body, html {
 
 
 
+
+.home-button img {
+    max-height: 120px; /* Adjust size as necessary */
+    width: auto;
+    display: block; /* Ensures the image is not hidden */
+}
+
+.home-button:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
 .contact {
     display: flex;
     flex-direction: column;
@@ -287,10 +298,6 @@ h1 {
     
 }
 
-img {
-    image-rendering: -webkit-optimize-contrast!important; /* For WebKit browsers like Chrome and Safari */
-    image-rendering: optimizeQuality!important; /* For Firefox */
-}
 .media-gallery img, 
 .media-gallery video {
     width: 100%;
@@ -312,6 +319,8 @@ video {
     height: auto; /* Maintain aspect ratio */
     display: block; /* To prevent any unwanted inline properties */
 }
+
+
 
 
 /* Modal visibility toggles */
@@ -482,6 +491,8 @@ video {
 
 
 
+
+
 #click-counter {
     background-color: transparent; /* Light gray background */
     color: #333; /* Dark text for visibility */
@@ -497,9 +508,3 @@ video {
     text-align: center; /* Centers text if stacked */
 
 }
-
-
-
-
-
-
