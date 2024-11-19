@@ -146,6 +146,7 @@ body, html {
     width: 100%;
     display: flex;
     justify-content: center;
+    transition: top 0.3s ease; /* Smooth transition for sliding effect */
     background-color: white; /* Fully transparent */
     z-index: 100;
     padding: 20px 10px ; /* Adjust padding to ensure vertical height matches desired positioning */

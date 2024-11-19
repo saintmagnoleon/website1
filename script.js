@@ -98,10 +98,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-if (window.innerWidth <= 768) {
+if (window.innerWidth <= 1920) {
     let lastScrollTop = 0;
     const navbar = document.querySelector('.navbar');
-
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > lastScrollTop) {
