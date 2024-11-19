@@ -185,17 +185,6 @@ body, html {
 
 
 
-
-.home-button img {
-    max-height: 120px; /* Adjust size as necessary */
-    width: auto;
-    display: block; /* Ensures the image is not hidden */
-}
-
-.home-button:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
 .contact {
     display: flex;
     flex-direction: column;
@@ -486,8 +475,6 @@ video {
 .contact-info a:hover {
     text-decoration: underline; /* Underline on hover for better interaction feedback */
 }
-
-
 
 
 
