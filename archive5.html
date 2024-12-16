@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shot on Iphone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="page-loader"></div>
+    <div id="content" style="display:none;">
+    <nav class="navbar">
+        <ul>
+        <li><a href="archive.html">Shot on Iphone</a></li>
+        </ul>
+    </nav>
+    <div id="work" class="work-section">
+        <div class="media-gallery">
+            <img src="shot on iphone/sky.jpg" alt="Photo 1" data-title="'SKY'" data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/policeman.jpg" alt="Photo 1" data-title="'POLICEMAN'" data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/me.jpg" alt="Photo 1" data-title="'ME'" data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/me1.jpg" alt="Photo 1" data-title="'ME THINKING'" data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/ladybird.jpg" alt="Photo 1" data-title="ladybird." data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/milan6.avif" alt="Photo 1" data-title="'SANS TITRE' (BTS)" data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/chaeyu2.avif" alt="Photo 1" data-title="My bouquet and I." data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/chaeyu3.avif" alt="Photo 1" data-title="TROPHY." data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/chaeyu4.avif" alt="Photo 1" data-title="Assisted by Lil Sis." data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/chaeyuonthewall.jpg" alt="Photo 1" data-title="'BOUQUET DE FLEURS' (BTS)" data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/diego.jpg" alt="Photo 1" data-title="'BLIND-RELIANCE' (BTS)" data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/nycap.jpg" alt="Photo 1" data-title="NY YANKEES GREEN CAP" data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/diegoxcam.jpg" alt="Photo 1" data-title="'BLIND-RELIANCE' (BTS)" data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/meholdingcamera.jpg" alt="Photo 1" data-title="hustle mind." data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/santi9.avif" alt="Photo 1" data-title="'MODERN TAOISM' IG post." data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/buttonup.jpg" alt="Photo 1" data-title="Purple Button-Up." data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/moto2.jpg" alt="Photo 1" data-title="Motorbike." data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <video controls poster="thumbnails/oihan.avif" data-title="'PLUH'" data-description="I had to put some Sax Sex so you can feel that slide." onclick="openLightbox(this)"> 
+                <source src="web_videos/oihan3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+            <img src="shot on iphone/car1.jpg" alt="Photo 1" data-title="Car + Garage." data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/moto1.jpg" alt="Photo 1" data-title="Motorbike." data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/scansofsanti.jpg" alt="Photo 1" data-title="Drafts for 'THE BARRACKS'." data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/me2.jpg" alt="Photo 1" data-title="Me facing the mirror." data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/RM032c.jpg" alt="Photo 1" data-title="032c RM COVER." data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/hanbokpants.jpg" alt="Photo 1" data-title="Crazy fit." data-description="Shot on Iphone." onclick="openLightbox(this)">
+            <img src="shot on iphone/ablohisms.jpg" alt="Photo 1" data-title="'Abloh-isms'" data-description="Shot on Iphone." onclick="openLightbox(this)">
+
+
+
+
+
+
+ 
+
+
+
+
+        </div>
+    </div>
+    <div id="lightbox-modal" class="lightbox" aria-hidden="true" role="dialog">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <span class="arrow left" onclick="changeImage(-1)">&#10094;</span>
+        <span class="arrow right" onclick="changeImage(1)">&#10095;</span>
+        <div class="lightbox-content">
+            <div class="media-container">
+                <img id="lightbox-img" class="hidden" src="" alt="">
+                <video id="lightbox-video" class="hidden" controls>
+                    <source id="video-source" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="lightbox-text">
+                <h2 id="lightbox-title">Title</h2>
+                <p id="lightbox-description">Description goes here.</p>
+            </div>
+        </div>
+    </div>
+    <div id="timer" style="position: fixed; top: 0; right: 0; padding: 10px; background: transparent; color: black; font-size: 12px; z-index: 1000;" > </div>
+    <div id="click-counter" style="position: fixed; top: 0; left: 10px; padding: 10px; background-color: transparent; color: black; font-size: 12px; z-index: 1000;">You clicked 0 times.</div>
+    <div id="footer" style="position: fixed; bottom: 0; right: 0px; padding: 5px; background: transparent; color: rgb(0, 0, 0); font-style: italic; font-size: 9px; z-index: 1000;">Developped by Seungyu Jung</div>
+    <script src="script.js"></script> 
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"BOUQUET DE FLEURS"</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="page-loader"></div>
+    <div id="content" style="display:none;">
+    <nav class="navbar">
+        <ul>
+            <li><a href="archive.html">"BOUQUET DE FLEURS"</a></li>
+        </ul>
+    </nav>
+    <div id="work" class="work-section">
+        <div class="media-gallery">
+            <img src="BOUQUET DE FLEURS/chaeyu1.avif" alt="Photo 1" data-title="'BOUQUET DE FLEURS'" data-description="The moment where I felt I was stepping up to the next echelon."  onclick="openLightbox(this)">
+            <video controls poster="thumbnails/chaeyu.jpg" data-title="'BLACK SWAN'" data-description="Directed by Seungyu Jung." onclick="openLightbox(this)">
+                <source src="web_videos/chaeyuballet.mp4" type="video/mp4" >
+                Your browser does not support the video tag.
+            </video>
+            <img src="BOUQUET DE FLEURS/chaeyu6.jpg" alt="Photo 1" data-title="FLY." data-description="Leap of beauty." onclick="openLightbox(this)">
+            <img src="BOUQUET DE FLEURS/chaeyu9.jpg" alt="Photo 1" data-title="'CAMOUFLAGE'" data-description="You can't see what I see." onclick="openLightbox(this)">
+            <img src="BOUQUET DE FLEURS/chaeyu5.avif" alt="Photo 1" data-title="FLY AGAIN." data-description="Leap of faith." onclick="openLightbox(this)">
+            <img src="BOUQUET DE FLEURS/chaeyu10.jpg" alt="Photo 1" data-title="'FLY HIGH'" data-description="Embodying the Air Jordan spirit." onclick="openLightbox(this)">
+            <img src="BOUQUET DE FLEURS/chaeyu2.jpg" alt="Photo 1" data-title="'LIKEMIKE'" data-description="The Reference." onclick="openLightbox(this)">
+
+
+
+           
+
+        </div>
+    </div>
+    <div id="lightbox-modal" class="lightbox" aria-hidden="true" role="dialog">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <span class="arrow left" onclick="changeImage(-1)">&#10094;</span>
+        <span class="arrow right" onclick="changeImage(1)">&#10095;</span>
+        <div class="lightbox-content">
+            <div class="media-container">
+                <img id="lightbox-img" class="hidden" src="" alt="">
+                <video id="lightbox-video" class="hidden" controls>
+                    <source id="video-source" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="lightbox-text">
+                <h2 id="lightbox-title">Title</h2>
+                <p id="lightbox-description">Description goes here.</p>
+            </div>
+        </div>
+    </div>
+    <div id="timer" style="position: fixed; top: 0; right: 0; padding: 10px; background: transparent; color: black; font-size: 12px; z-index: 1000;" > </div>
+    <div id="click-counter" style="position: fixed; top: 0; left: 10px; padding: 10px; background-color: transparent; color: black; font-size: 12px; z-index: 1000;">You clicked 0 times.</div>
+    <div id="footer" style="position: fixed; bottom: 0; right: 0px; padding: 5px; background: transparent; color: rgb(0, 0, 0); font-style: italic; font-size: 9px; z-index: 1000;">Developped by Seungyu Jung</div>
+    <script src="script.js"></script> 
+</body>
+</html>
