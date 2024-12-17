@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"SANS TITRE"</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="page-loader"></div>
+    <div id="content" style="display:none;">
+    <nav class="navbar">
+        <ul>
+            <li><a href="archive.html">"SANS TITRE"</a></li>
+        </ul>
+    </nav>
+    <div id="work" class="work-section">
+        <div class="media-gallery">
+            <img src="SANSTITRE/milan1.avif" alt="Photo 1" data-title="'SANS TITRE'" data-description="An ordinary day of Milan Pejic." onclick="openLightbox(this)">
+            
+            <img src="SANSTITRE/milan3.avif" alt="Photo 1" data-title="'SANS TITRE'" data-description="Transcendental meditation." onclick="openLightbox(this)">
+            <video controls poster="thumbnails/milan.avif" data-title="'SANS TITRE'" data-description="Directed by Seungyu Jung." onclick="openLightbox(this)">
+                <source src="web_videos/SANS_TITRE.mp4" type="video/mp4" >
+                Your browser does not support the video tag.
+            </video>
+            <img src="SANSTITRE/milan.avif" alt="Photo 1" data-title="'SANS TITRE'" data-description="Smoke it." onclick="openLightbox(this)">
+            <img src="SANSTITRE/milan4.avif" alt="Photo 1" data-title="'SANS TITRE'" data-description="Blinded by ourselves." onclick="openLightbox(this)"> 
+            <img src="SANSTITRE/milan5.avif" alt="Photo 1" data-title="'SANS TITRE'" data-description="'You Can't See What I See.'" onclick="openLightbox(this)"> 
+            <img src="SANSTITRE/milan7.avif" alt="Photo 1" data-title="'THERAPY'" data-description="No green screen." onclick="openLightbox(this)">
+            <img src="SANSTITRE/milan2.avif" alt="Photo 1" data-title="'SANS TITRE'" data-description="Smoke it again." onclick="openLightbox(this)">
+          
+
+        </div>
+    </div>
+    <div id="lightbox-modal" class="lightbox" aria-hidden="true" role="dialog">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <span class="arrow left" onclick="changeImage(-1)">&#10094;</span>
+        <span class="arrow right" onclick="changeImage(1)">&#10095;</span>
+        <div class="lightbox-content">
+            <div class="media-container">
+                <img id="lightbox-img" class="hidden" src="" alt="">
+                <video id="lightbox-video" class="hidden" controls>
+                    <source id="video-source" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="lightbox-text">
+                <h2 id="lightbox-title">Title</h2>
+                <p id="lightbox-description">Description goes here.</p>
+            </div>
+        </div>
+    </div>
+    <div id="timer" style="position: fixed; top: 0; right: 0; padding: 10px; background: transparent; color: black; font-size: 12px; z-index: 1000;" > </div>
+    <div id="click-counter" style="position: fixed; top: 0; left: 10px; padding: 10px; background-color: transparent; color: black; font-size: 12px; z-index: 1000;">You clicked 0 times.</div>
+    <div id="footer" style="position: fixed; bottom: 0; right: 0px; padding: 5px; background: transparent; color: rgb(0, 0, 0); font-style: italic; font-size: 9px; z-index: 1000;">Developped by Seungyu Jung</div>
+    <script src="script.js"></script> 
+</body>
+</html>

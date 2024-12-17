@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"ANTHROPOCÈNE"</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="page-loader"></div>
+    <div id="content" style="display:none;">
+    <nav class="navbar">
+        <ul>
+            <li><a href="archive.html">"ANTHROPOCÈNE"</a></li>
+        </ul>
+    </nav>
+    <div id="work" class="work-section">
+        <div class="media-gallery">
+            <img src="ANTHROPOCÈNE/eneko.avif" alt="Photo 1" data-title="'ANTHROPOCÈNE'" data-description="If you don't use this as your laptop wallpaper don't call yourself 'cool'." onclick="openLightbox(this)">
+            <img src="ANTHROPOCÈNE/eneko1.avif" alt="Photo 1" data-title="[N-EYE-KEY]" data-description="Ocean blue on the feet." onclick="openLightbox(this)">
+            <img src="ANTHROPOCÈNE/eneko2.avif" alt="Photo 1" data-title="'From Head 2 Toe'" data-description="" onclick="openLightbox(this)">
+            <img src="ANTHROPOCÈNE/eneko3.avif" alt="Photo 1" data-title="[N-EYE-KEY]" data-description="Ocean blue on the feet." onclick="openLightbox(this)">
+            <img src="ANTHROPOCÈNE/eneko4.avif" alt="Photo 1" data-title="'Bro necesito fotos pa mi insta'" data-description="-Mister Corvo" onclick="openLightbox(this)">
+            <img src="ANTHROPOCÈNE/eneko5.avif" alt="Photo 1" data-title="'INDIFFERENCE'" data-description="Stand on your business." onclick="openLightbox(this)">
+            <img src="ANTHROPOCÈNE/eneko6.avif" alt="Photo 1" data-title="'She like em hood and artsy'" data-description="Said mandem from the block." onclick="openLightbox(this)">
+
+
+     
+    </div>
+    <div id="lightbox-modal" class="lightbox" aria-hidden="true" role="dialog">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <span class="arrow left" onclick="changeImage(-1)">&#10094;</span>
+        <span class="arrow right" onclick="changeImage(1)">&#10095;</span>
+        <div class="lightbox-content">
+            <div class="media-container">
+                <img id="lightbox-img" class="hidden" src="" alt="">
+                <video id="lightbox-video" class="hidden" controls>
+                    <source id="video-source" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="lightbox-text">
+                <h2 id="lightbox-title">Title</h2>
+                <p id="lightbox-description">Description goes here.</p>
+            </div>
+        </div>
+    </div>
+    <div id="timer" style="position: fixed; top: 0; right: 0; padding: 10px; background: transparent; color: black; font-size: 12px; z-index: 1000;" > </div>
+    <div id="click-counter" style="position: fixed; top: 0; left: 10px; padding: 10px; background-color: transparent; color: black; font-size: 12px; z-index: 1000;">You clicked 0 times.</div>
+    <div id="footer" style="position: fixed; bottom: 0; right: 0px; padding: 5px; background: transparent; color: rgb(0, 0, 0); font-style: italic; font-size: 9px; z-index: 1000;">Developped by Seungyu Jung</div>
+    <script src="script.js"></script> 
+</body>
+</html>
